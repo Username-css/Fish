@@ -1,8 +1,8 @@
-name: Runner
+Name: Runner
 
 on:
-  workflow_dispatch:
-  
+  repository_dispatch:
+    types: [wisp]
 
 jobs:
   run-ollama:
@@ -39,7 +39,7 @@ jobs:
           nohup ollama serve > /dev/null 2>&1 &
           sleep 3
           
-          ollama pull gemma2:9b
+          ollama pull gemma:7b
 
       - name: finish
         run: |
