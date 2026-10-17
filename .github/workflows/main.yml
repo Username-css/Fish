@@ -1,7 +1,7 @@
 name: Runner
 
 on:
-  workflows_dispatch:
+  workflow_dispatch:
   
 
 jobs:
